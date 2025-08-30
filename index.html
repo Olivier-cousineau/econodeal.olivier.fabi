@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EconoDeal – Landing</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<header>
+  <div class="nav container">
+    <div class="brand">
+      <img src="./logo.svg" alt="EconoDeal" width="120" height="28">
+      <h1 data-i18n="title">EconoDeal – Les meilleures liquidations au Canada</h1>
+    </div>
+    <nav>
+      <a href="#deals">Deals</a>
+      <a href="./pages/rona_gallery.html" data-i18n="viewAllRona">Voir la galerie</a>
+      <a href="#investors" data-i18n="investorsTitle">Espace Investisseur</a>
+      <a href="mailto:ocousineau40@gmail.com" data-i18n="contact">Nous joindre</a>
+    </nav>
+    <div class="lang">
+      <button data-lang="fr" class="active">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="card">
+    <h2 data-i18n="title">EconoDeal – Les meilleures liquidations au Canada</h2>
+    <p class="sub" data-i18n="subtitle">Explorez les rabais de Walmart, Toys“R”Us, RONA/Best Buy/Canadian Tire — avec Amazon, eBay et Keepa.</p>
+    <div class="controls">
+      <label for="store">Magasin</label>
+      <select id="store"></select>
+      <label for="category">Catégorie</label>
+      <select id="category"></select>
+      <label for="minpct">% rabais min</label>
+      <input id="minpct" type="number" min="0" max="100" step="5" placeholder="0">
+      <input id="search" type="search" placeholder="Rechercher un produit…">
+      <span id="count" style="margin-left:auto;opacity:.8"></span>
+    </div>
+  </div>
+  <div class="card">
+    <h3>How it works</h3>
+    <p class="sub">Static site you can deploy to GitHub Pages or Vercel. Amazon/eBay/Keepa are linked as safe searches; direct Keepa charts can be added via backend later.</p>
+    <div class="actions">
+      <a href="./pages/rona_gallery.html">RONA Gallery</a>
+      <a href="#deals">All Deals</a>
+    </div>
+  </div>
+</section>
+
+<section id="deals" class="section container">
+  <h3>Deals</h3>
+  <div id="grid" class="grid"></div>
+</section>
+
+<section id="investors" class="section container">
+  <h3 data-i18n="investorsTitle">Espace Investisseur</h3>
+  <p class="sub" data-i18n="investorsCopy">EconoDeal construit la première plateforme canadienne de suivi des liquidations (style BrickSeek/Keepa), bilingue et multi‑magasins. Contactez‑nous pour le deck et le plan financier.</p>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> EconoDeal. Built for GitHub/Vercel deployment.</p>
+</footer>
+
+<script src="./assets/js/app.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear()</script>
+</body>
+</html>
